@@ -1,4 +1,4 @@
-<div class="home-container">
+<!-- <div class="home-container">
     <section class="hero-section">
         <h1>{{ welcomeMessage }}</h1>
         <p class="hero-description">{{ appDescription }}</p>
@@ -25,4 +25,75 @@
         <p>Check out the About page to learn more about this project.</p>
         <a routerLink="/about" class="cta-button primary">Go to About Page</a>
     </section>
+</div> -->
+
+<div class="home-container">
+
+    <!-- Section Tags -->
+    <section class="popular-tags">
+        <div class="tags-header">
+            <h2>Get started with our popular tags</h2>
+            <button class="view-all">View All</button>
+        </div>
+        <div class="tags">
+            @for (tag of tags; track tag.label) {
+            <div class="tag">
+                <img [src]="tag.icon" [alt]="tag.label" />
+                <span>{{ tag.label }}</span>
+            </div>
+            }
+        </div>
+    </section>
+
+    <!-- Contenu principal (gauche/droite) -->
+    <div class="main-content">
+
+        <!-- Colonne de gauche (posts principaux) -->
+        <div class="left-col">
+            @for (post of mainPosts; track post.title) {
+            <div class="post">
+                <img [src]="post.image" [alt]="post.title" class="post-image" />
+                <div class="post-content">
+                    <div class="tags">
+                        @for (tag of post.tags; track tag) {
+                        <span class="post-tag">{{ tag }}</span>
+                        }
+                    </div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+            </div>
+            }
+
+        </div>
+
+        <!-- Colonne de droite (carte Summit) -->
+        <div class="right-col">
+            <div class="summit-card">
+                <h4>{{ summitCard.title }}</h4>
+                <p>{{ summitCard.description }}</p>
+                <a routerLink="summitCard.link">Learn more</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Section des posts en vedette -->
+    <section class="featured-posts">
+        <h2>Featured Posts</h2>
+
+        <div class="posts-grid">
+            @for (post of featuredPosts; track post.title) {
+            <div class="post">
+                <img [src]="post.image" [alt]="post.title" class="post-image" />
+
+                <div class="post-content">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </section>
+
 </div>
