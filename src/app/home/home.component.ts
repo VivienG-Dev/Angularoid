@@ -15,8 +15,7 @@ interface Post {
 @Component({
     selector: 'app-home',
     standalone: true,
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    templateUrl: './home.component.html'
 })
 export class HomeComponent {
     tags: Tag[] = [
@@ -66,18 +65,11 @@ export class HomeComponent {
 
     summitCard = {
         title: 'Summit',
-        description: 'Summit est un thème moderne et puissant avec une variété de fonctionnalités et d’options pour construire un site unique.',
+        description: 'Summit est un thème moderne et puissant avec une variété de fonctionnalités et d\'options pour construire un site unique.',
         link: '/summit'
     };
 
     getRandomImage(): string {
-        // Option 1: Using Lorem Picsum (random images)
         return `https://picsum.photos/200/300?random=${Math.random()}`;
-
-        // Option 2: Using Unsplash Source (random images)
-        // return `https://source.unsplash.com/random/3x50?sig=${Math.random()}`;
-
-        // Option 3: Using Placeholder.com
-        // return `https://via.placeholder.com/50x50?text=${Math.random().toString(36).substring(7)}`;
     }
 }
