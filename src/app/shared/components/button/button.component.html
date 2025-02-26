@@ -1,0 +1,16 @@
+<button [type]="type" [disabled]="disabled" [class]="buttonClasses" [attr.aria-label]="ariaLabel || text">
+
+    @if (icon && iconPosition === 'left') {
+    <span class="mr-2">
+        <i class="{{icon}}"></i>
+    </span>
+    }
+
+    <span>{{ text }}</span>
+
+    @if (icon && iconPosition === 'right') {
+    <span class="ml-2">
+        <i class="{{icon}}"></i>
+    </span>
+    }
+</button>
