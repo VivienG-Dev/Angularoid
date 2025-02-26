@@ -31,7 +31,7 @@ export class HomeComponent {
     mainPosts: Post[] = [
         {
             title: 'Simple Ways To Show Your Love',
-            excerpt: 'Lorem ipgrhugioshbguioshuiofhgyfsqhgufis gighbgiog  gf ghsfiu ghio jfgop ngfsog fhg figh fign fduigh fidgoisum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar leo, eget euismod tortor.',
+            excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar leo, eget euismod tortor.',
             image: this.getRandomImage(),
             tags: ['Lifestyle', 'Health']
         },
