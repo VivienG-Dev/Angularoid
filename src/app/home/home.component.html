@@ -5,8 +5,8 @@
         class="flex flex-col md:flex-row justify-between mb-8 md:mb-16 rounded-2xl p-6 md:p-10 bg-white shadow-[0_-3px_0_0_rgba(0,0,0,0.1)_inset]">
         <div class="flex flex-col items-start justify-start w-full md:w-[30%] mb-6 md:mb-0">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Get started with our popular tags</h2>
-            <button class="bg-gray-800 text-white border-none py-2 px-4 cursor-pointer rounded hover:bg-gray-600">View
-                All</button>
+            <app-button text="View All" variant="primary" size="medium">
+            </app-button>
         </div>
         <div class="flex flex-wrap justify-center gap-4">
             @for (tag of tags; track tag.label) {
@@ -46,8 +46,12 @@
             <div class="bg-gray-100 p-6 rounded-lg text-left">
                 <h4 class="mt-0 mb-4 text-xl md:text-2xl">{{ summitCard.title }}</h4>
                 <p>{{ summitCard.description }}</p>
-                <a routerLink="summitCard.link"
-                    class="inline-block mt-4 no-underline text-blue-600 font-bold hover:underline">Learn more</a>
+                <div class="mt-4 flex gap-3">
+                    <app-button text="Learn more" variant="primary">
+                    </app-button>
+                    <app-button text="Documentation" variant="outline">
+                    </app-button>
+                </div>
             </div>
         </div>
 

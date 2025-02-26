@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../shared/components/button/button.component';
 
 interface Tag {
     label: string;
@@ -15,6 +16,7 @@ interface Post {
 @Component({
     selector: 'app-home',
     standalone: true,
+    imports: [ButtonComponent],
     templateUrl: './home.component.html'
 })
 export class HomeComponent {
