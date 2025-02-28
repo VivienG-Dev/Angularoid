@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['"Figtree"', 'ui-sans-serif', 'system-ui', '-apple-system', 'Arial', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
