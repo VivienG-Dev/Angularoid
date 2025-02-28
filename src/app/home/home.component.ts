@@ -31,7 +31,7 @@ export class HomeComponent {
         { label: 'Fitness', icon: this.getRandomImage() }
     ];
 
-    mainPosts: Post[] = [
+    posts: Post[] = [
         {
             title: 'Simple Ways To Show Your Love',
             excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar leo, eget euismod tortor.',
@@ -74,12 +74,18 @@ export class HomeComponent {
         }
     ];
 
+    maxPosts = 5;
+
+    get latestPosts(): Post[] {
+        return this.posts.slice(0, this.maxPosts);
+    }
+
     get recommendedPosts(): Post[] {
-        return this.mainPosts.filter(post => post.isRecommended);
+        return this.posts.filter(post => post.isRecommended).slice(0, this.maxPosts);
     }
 
     get featuredPosts(): Post[] {
-        return this.mainPosts.filter(post => post.isFeatured);
+        return this.posts.filter(post => post.isFeatured).slice(0, this.maxPosts);
     }
 
     summitCard = {

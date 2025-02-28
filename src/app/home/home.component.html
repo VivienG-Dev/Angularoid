@@ -24,7 +24,7 @@
 
         <!-- Left column (main posts) -->
         <div class="w-full lg:w-2/3">
-            @for (post of mainPosts; track post.title) {
+            @for (post of latestPosts; track post.title) {
             <div class="flex flex-col sm:flex-row mb-8">
                 <img [src]="post.image" [alt]="post.title"
                     class="w-full sm:min-w-[250px] sm:w-[250px] md:min-w-[350px] md:w-[350px] h-[200px] sm:mr-4 object-cover rounded-2xl flex-shrink-0 mb-4 sm:mb-0" />
